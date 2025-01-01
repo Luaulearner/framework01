@@ -64,7 +64,7 @@ features:Show() -- shows the tab
 
 -- Add console for ur Script/Gui, Idk if works
 features:AddConsole({ 
-	["y"] = 500,
+	["y"] = 250,
 	["readonly"] = false,  
 	["source"] = "Lua",
 })
