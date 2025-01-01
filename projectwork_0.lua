@@ -1,5 +1,5 @@
 local playthemesong = Instance.new("Sound")
-playthemesong.SoundId = "rbxassetid://100583153264515"
+playthemesong.SoundId = "rbxassetid://4571975095"
 playthemesong.Volume = 10
 playthemesong.Parent = game.SoundService
 playthemesong:Play()
