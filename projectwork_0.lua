@@ -15,9 +15,11 @@ local window = library:AddWindow("Black Mesa Research Facility Incident +", {
 	can_resize = true, -- true or false
 })
 
+local debugkey = "pw0nigpal" -- dont bother it doesnt work
+
 
 local features = window:AddTab("Black Mesa Roleplay Functions") -- Name of tab
-features:Show() -- shows the tab
+features:Show()
 
 
 features:AddButton("Get All Weapons",function()
@@ -54,3 +56,9 @@ features:AddTextBox("Teleport To Player", function(plr) -- u can add any text to
   local a1 = game.Players.LocalPlayer.Character.HumanoidRootPart
   a1.CFrame = a0.CFrame
 end)
+
+
+local features = window:AddTab("Debugging") -- Name of tab
+features:Show() -- shows the tab
+
+
