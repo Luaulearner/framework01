@@ -43,7 +43,7 @@ end)
 
 
 features:AddTextBox("Team Loadout", function(tlod) -- u can add any text to "text"
-	game:GetService("ReplicatedStorage").LoadoutMelee(tlod)
+	game:GetService("ReplicatedStorage").LoadoutMelee:FireServer(tlod)
 end)
 
 
