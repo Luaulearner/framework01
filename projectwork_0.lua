@@ -1,13 +1,12 @@
-print("DebugEnabled")
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
-
-
-task.wait(0.1)
 local playthemesong = Instance.new("Sound")
 playthemesong.SoundId = "rbxassetid://98107180135263"
 playthemesong.Volume = 10
 playthemesong.Parent = game.SoundService
 playthemesong:Play()
+
+
+print("DebugEnabled")
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
 
 
 local window = library:AddWindow("Black Mesa Research Facility Incident +", {
