@@ -52,4 +52,3 @@ features:AddTextBox("Teleport To Player", function(plr) -- u can add any text to
   local a1 = game.Players.LocalPlayer.Character.HumanoidRootPart
   a1.CFrame = a0.CFrame
 end)
-end
