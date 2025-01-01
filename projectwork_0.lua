@@ -62,3 +62,9 @@ local features = window:AddTab("Debugging") -- Name of tab
 features:Show() -- shows the tab
 
 
+-- Add console for ur Script/Gui, Idk if works
+features:AddConsole({ 
+	["y"] = 500,
+	["readonly"] = false,  
+	["source"] = "Lua",
+})
