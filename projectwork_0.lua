@@ -1,5 +1,5 @@
 local playthemesong = Instance.new("Sound")
-playthemesong.SoundId = "rbxassetid://104501435726803"
+playthemesong.SoundId = "rbxassetid://100583153264515"
 playthemesong.Volume = 10
 playthemesong.Parent = game.SoundService
 playthemesong:Play()
@@ -50,7 +50,13 @@ end)
 
 
 features:AddTextBox("Teleport To Player", function(plr) -- u can add any text to "text"
+  if plr.Name then
   local a0 = game.Workspace[plr].HumanoidRootPart
   local a1 = game.Players.LocalPlayer.Character.HumanoidRootPart
   a1.CFrame = a0.CFrame
+  elseif plr.DisplayName
+    local a0 = game.Workspace[plr].HumanoidRootPart
+  local a1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+  a1.CFrame = a0.CFrame
+  end
 end)
