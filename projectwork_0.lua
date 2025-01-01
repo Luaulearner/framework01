@@ -23,6 +23,7 @@ features:Show() -- shows the tab
 features:AddButton("Get All Weapons",function()
 	for _, v in pairs(game:GetService("ReplicatedStorage").Common.CGS.Weapons:GetChildren()) do
 	  game:GetService("ReplicatedStorage").LoadoutGP:FireServer(v.Name)
+	  end
 end)
 
 
