@@ -46,5 +46,37 @@ local window = library:AddWindow("Black Mesa Research Facility Incident +", {
 })
 
 
+local features = window:AddTab("Black Mesa Roleplay Functions") -- Name of tab
+features:Show() -- shows the tab
 
+
+features:AddButton("Get All Weapons",function()
+	for _, v in pairs(game:GetService("ReplicatedStorage").Common.CGS.Weapons:GetChildren()) do
+	  game:GetService("ReplicatedStorage").LoadoutGP:FireServer(v.Name)
+end)
+
+
+features:AddTextBox("Gamepass Gun", function(text) -- u can add any text to "text"
+	game:GetService("ReplicatedStorage").LoadoutGP:FireServer(text)
+end)
+
+
+features:AddTextBox("Primary Gun", function(pri) -- u can add any text to "text"
+	game:GetService("ReplicatedStorage").LoadoutPrimary:FireServer(pri)
+end)
+
+
+features:AddTextBox("Secondary Gun", function(sec) -- u can add any text to "text"
+	game:GetService("ReplicatedStorage").LoadoutSecondary:FireServer(sec)
+end)
+
+
+features:AddTextBox("Team Loadout", function(tlod) -- u can add any text to "text"
+	game:GetService("ReplicatedStorage").LoadoutMelee(tlod)
+end)
+
+
+features:AddTextBox("Teleport To Player", function(text) -- u can add any text to "text"
+	game:GetService("ReplicatedStorage").Events.FreeGifts.Gift2:FireServer(text,"Clicks",false,false,"Normal")
+end)
 end
