@@ -50,7 +50,7 @@ end)
 
 
 features:AddTextBox("Teleport To Player", function(plr) -- u can add any text to "text"
-  local a0 = game.Workspace[plr.Name].HumanoidRootPart
+  local a0 = game.Workspace[plr].HumanoidRootPart
   local a1 = game.Players.LocalPlayer.Character.HumanoidRootPart
   a1.CFrame = a0.CFrame
 end)
