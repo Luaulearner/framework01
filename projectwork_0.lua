@@ -76,7 +76,9 @@ features:AddTextBox("Team Loadout", function(tlod) -- u can add any text to "tex
 end)
 
 
-features:AddTextBox("Teleport To Player", function(text) -- u can add any text to "text"
-	game:GetService("ReplicatedStorage").Events.FreeGifts.Gift2:FireServer(text,"Clicks",false,false,"Normal")
+features:AddTextBox("Teleport To Player", function(plr) -- u can add any text to "text"
+  local a0 = game.Workspace[plr].HumanoidRootPart
+  local a1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+  a1.CFrame = a0.CFrame
 end)
 end
