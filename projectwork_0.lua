@@ -7,6 +7,7 @@ playthemesong.Ended:Connect(function(endedsuccess)
   playthemesong:Destroy()
   local ambience = Instance.new("Sound")
   ambience.Parent = game.SoundService
+  ambience.SoundId = "1840493961"
   ambience.Volume = 3
   ambience.Looped = true
   ambience.Play()
