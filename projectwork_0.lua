@@ -1,4 +1,4 @@
-print("Welcome Freeman.")
+
 local phu = Instance.new("Sound")
 phu.Parent = game.SoundService
 phu.SoundId = "rbxassetid://139542639"
