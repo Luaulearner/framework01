@@ -8,8 +8,9 @@ phu:Play()
 phu.Ended:Connect(function(yeahiteneded)
   local newsoundserv = Instance.new("Sound")
   newsoundserv.Parent = game.SoundService
-  newsoundserv.Volume = 10
+  newsoundserv.Volume = 1
   newsoundserv.SoundId = "rbxassetid://8505749045"
+  newsoundserv.Looped = true
   newsoundserv:Play()
   end)
 print("DebugEnabled")
