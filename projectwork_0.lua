@@ -1,9 +1,16 @@
 local playthemesong = Instance.new("Sound")
-playthemesong.SoundId = "rbxassetid://4571975095"
+playthemesong.SoundId = "112484819659505"
 playthemesong.Volume = 10
 playthemesong.Parent = game.SoundService
 playthemesong:Play()
-
+playthemesong.Ended:Connect(function(endedsuccess)
+  playthemesong:Destroy()
+  local ambience = Instance.new("Sound")
+  ambience.Parent = game.SoundService
+  ambience.Volume = 3
+  ambience.Looped = true
+  ambience.Play()
+  end)
 
 print("DebugEnabled")
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
