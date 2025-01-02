@@ -1,6 +1,25 @@
 print("Welcome Freeman.")
-
-
+local phu = Instance.new("Sound")
+phu.Parent = game.SoundService
+phu.SoundId = "rbxassetid://139542639"
+phu.Volume = 10
+---
+local core = Instance.new("ScreenGui")
+core.Parent = game.CoreGui
+local core2 = Instance.new("Frame")
+core2.Parent = core
+core2.Size = UDim2.new(0.8, 20, 0.8, 20)
+core2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+task.wait(1)
+core2.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+phu.Ended:Connect(function(yeahiteneded)
+  core2:Destroy()
+  core:Destroy()
+  local newsoundserv = Instance.new("Sound")
+  newsoundserv.Parent = game.SoundService
+  newsoundserv.Volume = 10
+  newsoundserv.SoundId = "rbxassetid://8505749045"
+  end)
 print("DebugEnabled")
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
 
