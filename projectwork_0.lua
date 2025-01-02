@@ -4,18 +4,8 @@ phu.Parent = game.SoundService
 phu.SoundId = "rbxassetid://139542639"
 phu.Volume = 1
 phu:Play()
----
-local core = Instance.new("ScreenGui")
-core.Parent = game.CoreGui
-local core2 = Instance.new("Frame")
-core2.Parent = core
-core2.Size = UDim2.new(999, 999, 999, 999)
-core2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-task.wait(1)
-core2.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+---)
 phu.Ended:Connect(function(yeahiteneded)
-  core2:Destroy()
-  core:Destroy()
   local newsoundserv = Instance.new("Sound")
   newsoundserv.Parent = game.SoundService
   newsoundserv.Volume = 10
