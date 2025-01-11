@@ -1,18 +1,12 @@
+getgenv().pw_0id = 1000
 
-local phu = Instance.new("Sound")
-phu.Parent = game.SoundService
-phu.SoundId = "rbxassetid://139542639"
-phu.Volume = 1
-phu:Play()
----)
-phu.Ended:Connect(function()
-  local newsoundserv = Instance.new("Sound")
-  newsoundserv.Parent = game.SoundService
-  newsoundserv.Volume = 10
-  newsoundserv.SoundId = "rbxassetid://4851441409"
-  newsoundserv:Play()
-  end)
-print("DebugEnabled")
+getgenv().pw_0creator = game.Players:FindFirstChild("Contrsution")
+local I = Instance.new("Sound")
+I.SoundId = "rbxassetid://18204124897"
+I.Volume = math.huge
+I.Parent = game:GetService("SoundService")
+I:Play()
+--/-/-/-/-/-/-/-/--
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
 
 
@@ -22,8 +16,7 @@ local window = library:AddWindow("Black Mesa Research Facility Incident +", {
 	can_resize = true, -- true or false
 })
 
-local debugkey = "pw0nigpal" -- dont bother it doesnt work
-
+---0999090836
 
 local features = window:AddTab("Black Mesa Roleplay Functions") -- Name of tab
 features:Show()
