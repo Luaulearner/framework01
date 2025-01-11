@@ -55,7 +55,7 @@ features:AddTextBox("Teleport To Player", function(plr) -- u can add any text to
   a1.CFrame = a0.CFrame
 end)
 
-features:AddTextBox("RemoveUNN", function(shitty)
+features:AddButton("RemoveUNN", function()
   for _, v in pairs(game:GetDescendants()) do
     if v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("ParticleEmitter") or v:IsA("Fire") or v:IsA("Smoke") or v:IsA("CylinderMesh") or v:IsA("BevelMesh") or v:IsA("Sparkles") or v:IsA("DataModelMesh") or v:IsA("FileMesh") then
       v:Destroy()
