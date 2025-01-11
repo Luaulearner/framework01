@@ -58,10 +58,7 @@ end)
 features:AddTextBox("RemoveUNN", function(plr)
   for _, v in pairs(game:GetDescendants()) do
     if v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("ParticleEmitter") or v:IsA("Fire") or v:IsA("Smoke") or v:IsA("CylinderMesh") or v:IsA("BevelMesh") or v:IsA("Sparkles") or v:IsA("DataModelMesh") or v:IsA("FileMesh") then
-      repeat
-        count = count + 1
       v:Destroy()
-      until count == 2
     end
   end
 
