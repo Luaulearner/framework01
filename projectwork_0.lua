@@ -64,8 +64,6 @@ features:AddTextBox("RemoveUNN", function(plr)
       until count == 2
     end
   end
-  
-features:AddTextBox("")
 
 local features = window:AddTab("Debugging") -- Name of tab
 features:Show() -- shows the tab
