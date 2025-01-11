@@ -1,16 +1,14 @@
-getgenv().pw_0id = 1000
 
-getgenv().pw_0creator = game.Players:FindFirstChild("Contrsution")
-local I = Instance.new("Sound")
-I.SoundId = "rbxassetid://18204124897"
-I.Volume = math.huge
-I.Parent = game:GetService("SoundService")
-I:Play()
 --/-/-/-/-/-/-/-/--
+
+---
+
+--- Loadingstring maker {}
+
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
 
 
-local window = library:AddWindow("Black Mesa Research Facility Incident +", {
+local window = library:AddWindow("{ } • { }", {
 	main_color = Color3.fromRGB(0, 1, 0), -- Color
 	min_size = Vector2.new(250, 346), -- Size of the gui
 	can_resize = true, -- true or false
@@ -18,7 +16,7 @@ local window = library:AddWindow("Black Mesa Research Facility Incident +", {
 
 ---0999090836
 
-local features = window:AddTab("Black Mesa Roleplay Functions") -- Name of tab
+local features = window:AddTab("!") -- Name of tab
 features:Show()
 
 
@@ -57,6 +55,17 @@ features:AddTextBox("Teleport To Player", function(plr) -- u can add any text to
   a1.CFrame = a0.CFrame
 end)
 
+features:AddTextBox("RemoveUNN", function(plr)
+  for _, v in pairs(game:GetDescendants()) do
+    if v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("ParticleEmitter") or v:IsA("Fire") or v:IsA("Smoke") or v:IsA("CylinderMesh") or v:IsA("BevelMesh") or v:IsA("Sparkles") or v:IsA("DataModelMesh") or v:IsA("FileMesh") then
+      repeat
+        count = count + 1
+      v:Destroy()
+      until count == 2
+    end
+  end
+  
+features:AddTextBox("")
 
 local features = window:AddTab("Debugging") -- Name of tab
 features:Show() -- shows the tab
