@@ -12,6 +12,7 @@ end
 if isfile(ap) then
   local super = Instance.new("Sound")
   super.Parent = game.SoundService
+  super.SoundId = getcustomasset(ap)
   super.Volume = math.huge
   super.Looped = true
   super:Play()
