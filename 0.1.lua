@@ -12,10 +12,10 @@ print("Done!")
 end
 if isfile(ap) then
   local super = Instance.new("Sound")
-  super.Parent = game.SoundService
-  super.SoundId = getcustomasset(ap)
-  super.Volume = math.huge
-  super.Looped = true
-  super:Play()
+ getgenv().super.Parent = game.SoundService
+  getgenv().super.SoundId = getcustomasset(ap)
+ getgenv().super.Volume = math.huge
+  getgenv().super.Looped = true
+  getgenv().super:Play()
 end
 end
