@@ -77,3 +77,15 @@ end)
 features:AddButton("Be Bright", function()
   game.Lighting.Ambient = Color3.fromRGB(255, 255, 255)
 end)
+
+
+features:AddButton("Get Props", function()
+  for _, v in pairs(game:GetDescendants()) do
+    if v:IsA("Tool") and v.Name == "Engineer Props" then
+      v.Parent = game.Players.LocalPlayer.Backpack
+    end
+    if v:IsA("Tool") and v.Name == "Medic Props" then
+      v.Parent = game.Players.LocalPlayer.Backpack
+    end
+  end
+end)
