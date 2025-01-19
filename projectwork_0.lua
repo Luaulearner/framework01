@@ -72,3 +72,8 @@ features:AddButton("RemoveUNN", function()
     end
   end
 end)
+
+
+features:AddButton("Be Bright", function()
+  game.Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+end)
