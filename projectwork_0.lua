@@ -66,7 +66,7 @@ end)
 
 
 features:AddButton("RemoveUNN", function()
-  for _, v in pairs(Map:GetDescendants()) do
+  for _, v in pairs(workspace.Map:GetDescendants()) do
     if v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("ParticleEmitter") or v:IsA("Fire") or v:IsA("Smoke") or v:IsA("CylinderMesh") or v:IsA("BevelMesh") or v:IsA("Sparkles") or v:IsA("DataModelMesh") or v:IsA("FileMesh") then
       v:Destroy()
     end
