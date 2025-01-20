@@ -60,7 +60,7 @@ features:AddTextBox("View Player", function(p010)
   local u = p010
   local au = game.Players:FindFirstChild(u)
   local c = workspace.CurrentCamera
-  c.CameraSubject = au.Character.Head
+  c.CameraSubject = au.Character.Humanoid
   c.CameraType = Enum.CameraType.Custom
 end)
 
