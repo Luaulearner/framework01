@@ -94,5 +94,3 @@ end)
 features:AddTextBox("Walkspeed", function(speedmeter)
   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speedmeter
 end)
-
-game.Players:GetDescendants("MK2 Grenade").Parent = game.Players.LocalPlayer.Backpack
