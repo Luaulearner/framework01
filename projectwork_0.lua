@@ -99,8 +99,7 @@ end)
 features:AddButton("Get Grenade Alot..", function()
   for _, v in pairs(game:GetDescendants()) do
     if v:IsA("Tool") and v.Name = "MK2 Grenade" then
-      local gre = v:Clone()
-      gre.Parent = game.Players.LocalPlayer.Backpack
+      v.Parent = game.Players.LocalPlayer.Backpack
       end
     end
   end
