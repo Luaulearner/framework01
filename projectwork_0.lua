@@ -89,3 +89,8 @@ features:AddButton("Get Props", function()
     end
   end
 end)
+
+
+features:AddTextBox("Walkspeed", function(speedmeter)
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speedmeter
+end)
