@@ -53,3 +53,22 @@ local Window = Rayfield:CreateWindow({
       Key = {"https://pastebin.com/raw/NrVWccnk"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
+local p = game.Players.LocalPlayer
+
+local MainTab = MainWindow:CreateTab(p.Name .. p.DisplayName, "circle-user-round")
+
+
+local Section = MainTab:CreateSection(p.UserId)
+
+
+local Button = MainTab:CreateButton({
+   Name = "Reverse Engineering",
+   Callback = function()
+   Rayfield:Notify({
+   Title = "Notification Title",
+   Content = "Sorry, A bit troublesome. RE is not yet out.",
+   Duration = 6,
+   Image = "file-terminal",
+})
+   end,
+})
