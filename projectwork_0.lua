@@ -95,34 +95,5 @@ features:AddTextBox("Walkspeed", function(speedmeter)
   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speedmeter
 end)
 
-function SimpleDecompile(module)
-    local Module = require(module)
-    local DecompiledModule = ""
-
-    local function processTable(tab, indent)
-        for key, value in pairs(tab) do
-            if typeof(value) == "table" then
-                DecompiledModule = DecompiledModule .. ("\t"):rep(indent) .. key .. " = {\n"
-                processTable(value, indent + 1)
-                DecompiledModule = DecompiledModule .. ("\t"):rep(indent) .. "}\n"
-            elseif typeof(value) == "function" then
-                DecompiledModule = DecompiledModule .. ("\t"):rep(indent) .. key .. " = function()\n\t\t-- function body\n\tend,\n"
-            else
-                DecompiledModule = DecompiledModule .. ("\t"):rep(indent) .. key .. " = " .. tostring(value) .. ",\n"
-            end
-        end
-    end
-
-    processTable(Module, 0)
-    
-    return DecompiledModule
-end
-
-features:AddTextBox("decompiler", function(v)
-  local a = (v)
-  local b = SimpleDecompile(a)
-  print(b)
-end)
-
 
 game:GetService("Players").LocalPlayer.PlayerGui.HoverOverObject:Destroy()
