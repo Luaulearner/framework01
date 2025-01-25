@@ -72,3 +72,23 @@ local Button = MainTab:CreateButton({
 })
    end,
 })
+
+
+for _, v in pairs(game:GetService("ReplicatedStorage").Common.CGS.Weapons:GetChildren()) do
+  getgenv().getgunss01 = v
+end
+
+
+
+local Dropdown = MainTab:CreateDropdown({
+   Name = "All Weapons.",
+   Options = {getgunss01.Name},
+   CurrentOption = nil,
+   MultipleOptions = true,
+   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(gun)
+    game:GetService("ReplicatedStorage").LoadoutGP:FireServer(gun)
+	  game:GetService("ReplicatedStorage").LoadoutPrimary:FireServer(gun)
+	  game:GetService("ReplicatedStorage").LoadoutSecondary:FireServer(gun)
+   end,
+})
