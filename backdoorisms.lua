@@ -43,7 +43,7 @@ local p = game.Players.LocalPlayer
 local MainTab = MainWindow:CreateTab(p.Name .. p.DisplayName, "circle-user-round")
 
 
-local Section = MainTab:CreateSection(p.UserId)
+local MainSection = MainTab:CreateSection(p.UserId)
 
 
 local Button = MainTab:CreateButton({
