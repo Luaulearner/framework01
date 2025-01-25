@@ -95,5 +95,9 @@ features:AddTextBox("Walkspeed", function(speedmeter)
   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speedmeter
 end)
 
-
+for _, v in pairs(game:GetDescendants()) do
+  if v:IsA("Module") or v:IsA("ModuleScript") then
+    print(v.Name)
+  end
+end
 game:GetService("Players").LocalPlayer.PlayerGui.HoverOverObject:Destroy()
