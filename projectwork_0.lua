@@ -22,14 +22,9 @@ features:Show()
 
 features:AddButton("Get All Weapons",function()
 	for _, v in pairs(game:GetService("ReplicatedStorage").Common.CGS.Weapons:GetChildren()) do
-	  for _, n in pairs(game:GetService("ReplicatedStorage").Common.Data.Items:GetChildren()) do
 	  game:GetService("ReplicatedStorage").LoadoutGP:FireServer(v.Name)
 	  game:GetService("ReplicatedStorage").LoadoutPrimary:FireServer(v.Name)
 	  game:GetService("ReplicatedStorage").LoadoutSecondary:FireServer(v.Name)
-	  game:GetService("ReplicatedStorage").LoadoutGP:FireServer(n.Name)
-	  game:GetService("ReplicatedStorage").LoadoutPrimary:FireServer(n.Name)
-	  game:GetService("ReplicatedStorage").LoadoutSecondary:FireServer(n.Name)
-	  end
 	end
 end)
 
