@@ -1,20 +1,3 @@
-getgenv().scan = function(number)
-if number == 1 then
-  for i = 1, 90 do
-    task.wait(0.1)
-    print("Finding ; { d00m }.")
-  end
-  elseif number == 2 then
-    for i = 1, 100 do
-      task.wait(0.2)
-      print("Finding ; { r00m }.")
-    end
-  elseif number == 3 then
-    for i = 1, 20 do
-      task.wait(0.3)
-      print("Finding ; { patched }.") -- most believavle
-    end
-end
 
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
@@ -53,6 +36,8 @@ local Window = Rayfield:CreateWindow({
       Key = {"https://pastebin.com/raw/NrVWccnk"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
+
+
 local p = game.Players.LocalPlayer
 
 local MainTab = MainWindow:CreateTab(p.Name .. p.DisplayName, "circle-user-round")
