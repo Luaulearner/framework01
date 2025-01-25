@@ -40,10 +40,10 @@ local Window = Rayfield:CreateWindow({
 
 local p = game.Players.LocalPlayer
 
-local MainTab = MainWindow:CreateTab(p.Name, "circle-user-round")
+local Tab = MainWindow:CreateTab(p.Name, "circle-user-round")
 
 
-local MainSection = MainTab:CreateSection(p.UserId)
+local Section = MainTab:CreateSection(p.UserId)
 
 
 local Button = MainTab:CreateButton({
