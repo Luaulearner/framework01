@@ -79,13 +79,19 @@ features:AddButton("Be Bright", function()
 end)
 
 
-features:AddButton("Get Props", function()
+features:AddButton("Get Props/Grenades", function()
   for _, v in pairs(game:GetDescendants()) do
     if v:IsA("Tool") and v.Name == "Engineer Props" then
       v.Parent = game.Players.LocalPlayer.Backpack
     end
     if v:IsA("Tool") and v.Name == "Medic Props" then
       v.Parent = game.Players.LocalPlayer.Backpack
+      if v:IsA("Tool") and v.Name == "MK2 Grenade" then
+        v.Parent = game.Players.LocalPlayer.Backpack
+      end
+      if v:IsA("Tool") and v.Name == "MK3 Grenade" then
+        v.Parent = game.Players.LocalPlayer.Backpack
+      end
     end
   end
 end)
