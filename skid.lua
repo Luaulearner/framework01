@@ -69,6 +69,19 @@ local Button = Tab:CreateButton({
    end,
 })
 
+local Button = Tab:CreateButton({
+   Name = "Notify Player Speed",
+   Callback = function()
+   Rayfield:Notify({
+   Title = "Current Speed Value",
+   Content = "You are at the rate of ".. game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,
+   Duration = 3,
+   Image = "car",
+})
+   end,
+})
+
+
 local Input = Tab:CreateInput({
    Name = "Walkspeed",
    CurrentValue = "",
@@ -81,13 +94,3 @@ local Input = Tab:CreateInput({
 })
 
 
-local Input = Tab:CreateInput({
-   Name = "JumpPower",
-   CurrentValue = "",
-   PlaceholderText = "Your JP Here",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input2",
-   Callback = function(jp0)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = jp0
-   end,
-})
