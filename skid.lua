@@ -94,3 +94,25 @@ local Input = Tab:CreateInput({
 })
 
 
+local STab = Window:CreateTab("External GUI's", "app-window-mac")
+local Section = STab:CreateSection("Debugs")
+
+
+local Button = STab:CreateButton({
+   Name = "#1 RemoteSpy Mobile / PC",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/raelhubfunctions/Save-scripts/refs/heads/main/SimpleSpyMobile.lua"))()
+   end,
+})
+
+
+local Button = STab:CreateButton({
+   Name = "#2 Keyless Dex Explorer Mobile / PC",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Keyless-Mobile-Dex-Reupload-22707"))()
+   end,
+})
+
+local Paragraph = STab:CreateParagraph({Title = "On how we will expand this section of the script:", Content = "On the discord server you will have to go to the section 2 gui's suggestion channel to suggest obviously and make sure to add a script while explaining what it does, its self explanatory."})
+
+
