@@ -38,18 +38,17 @@ local Tab = Window:CreateTab("Section One", "app-window-mac")
 local Section = Tab:CreateSection("Auras")
 
 local Button = Tab:CreateButton({
-   Name = "Script Test [Tests if the script is working.]",
+   Name = "Script Status",
    Callback = function()
    task.wait(1)
    Rayfield:Notify({
    Title = "Status;",
-   Content = "Success",
+   Content = "Script Online.",
    Duration = 6.5,
    Image = nil,
 })
    end,
 })
-
 local Input = Tab:CreateInput({
    Name = "Teleport To Aura",
    CurrentValue = "",
@@ -58,5 +57,17 @@ local Input = Tab:CreateInput({
    Flag = "Input1",
    Callback = function(auraname)
      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Morphs[auraname].CFrame
+   end,
+})
+
+
+local Dropdown = Tab:CreateDropdown({
+   Name = "Auras",
+   Options = {workspace.Morphs},
+   CurrentOption = {""},
+   MultipleOptions = false,
+   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Options)
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Morphs[Options].CFrame
    end,
 })
